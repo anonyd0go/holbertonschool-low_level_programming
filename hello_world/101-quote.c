@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 
 /**
  * main - Prints a string using putchar
@@ -7,13 +8,9 @@
 int main(void)
 {
 	char str[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	int i;
-	int len_str = sizeof(str);
+	int size_str = sizeof(str);
 
-	for (i = 0; i < len_str; i++)
-	{
-		putchar(str[i]);
-	}
+	write(1, str, size_str);
 
 	return (1);
 }
