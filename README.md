@@ -3,4 +3,4 @@ This repository contains file related to learning C programming
 The project based focus helps in applying knowledge in real world scenarios
 
 ## Hello World
-Introsuction to C programming
+Introduction to C programming
