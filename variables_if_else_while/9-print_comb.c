@@ -7,9 +7,9 @@
  */
 int main(void)
 {
-	int ascii = 48;
+	int ascii;
 
-	for (ascii; ascii <= 57 ; ascii++)
+	for (ascii = 48; ascii <= 57 ; ascii++)
 	{
 		putchar(ascii);
 		if (ascii < 57)
