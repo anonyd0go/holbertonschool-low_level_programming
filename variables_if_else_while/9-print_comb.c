@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	int ascii = 49;
+	int ascii = 48;
 
 	while (ascii < 57)
 	{
