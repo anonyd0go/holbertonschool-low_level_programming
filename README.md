@@ -4,3 +4,6 @@ The project based focus helps in applying knowledge in real world scenarios
 
 ## Hello World
 Introduction to C programming
+
+## Variables, if, else, while
+Using variables, creating conditionals, using loops
