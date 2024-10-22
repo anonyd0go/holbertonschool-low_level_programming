@@ -9,14 +9,16 @@ int main(void)
 {
 	int ascii = 48;
 
-	while (ascii < 57)
+	for (ascii; ascii <= 57 ; ascii++)
 	{
 		putchar(ascii);
-		putchar(',');
-		putchar(' ');
-		ascii++;
+		if (ascii < 57)
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
-	putchar(ascii);
+	putchar('\n');
 
 	return (0);
 }
