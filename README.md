@@ -7,3 +7,6 @@ Introduction to C programming
 
 ## Variables, if, else, while
 Using variables, creating conditionals, using loops
+
+## Functions and nested loops
+Define and declare functions, use nested loops, explore variable scope
