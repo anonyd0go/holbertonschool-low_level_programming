@@ -11,7 +11,7 @@ int _islower(int c)
 
 	if ('a' <= c && c <= 'z')
 		confirmation = 1;
-	if ('A' <= c && c <= 'Z')
+	else
 		confirmation = 0;
 
 	return (confirmation);
