@@ -1,4 +1,5 @@
 #include "main.h"
+void print_clock(int a, int b, int c, int d);
 
 /**
  * jack_bauer - Prints every hour and every minute of the day
@@ -14,29 +15,61 @@ void jack_bauer(void)
 	while (i < 3)
 	{
 		j = 0;
-		while (j < 4)
+		if (i < 2)
 		{
-			k = 0;
-			while (k < 6)
+			while (j <= 9)
 			{
-				l = 0;
-				while (l <= 9)
+				k = 0;
+				while (k < 6)
 				{
-					_putchar(i + '0');
-					_putchar(j + '0');
-					_putchar(':');
-					_putchar(k + '0');
-					_putchar(l + '0');
-					_putchar('\n');
-
-					l++;
+					l = 0;
+					while (l <= 9)
+					{
+						print_clock(i, j, k, l);
+						l++;
+					}
+					k++;
 				}
-
-				k++;
-			}
-
 			j++;
+			}
+		}
+		else
+		{
+			while (j < 4)
+			{
+				k = 0;
+				while (k < 6)
+				{
+					l = 0;
+					while (l <= 9)
+					{
+						print_clock(i, j, k, l);
+						l++;
+					}
+				k++;
+				}
+			j++;
+			}
 		}
 		i++;
 	}
+}
+
+
+/**
+ * print_clock - The clock based on the input of the num
+ * @a: tens of the hour
+ * @b: units of hour
+ * @c: tens of minutes
+ * @d: units of minutes
+ * Return: Always void
+ */
+void print_clock(int a, int b, int c, int d)
+{
+	_putchar(a + '0');
+	_putchar(b + '0');
+	_putchar(':');
+	_putchar(c + '0');
+	_putchar(d + '0');
+	_putchar('\n');
 }
