@@ -13,19 +13,24 @@ void times_table(void)
 
 	for (i = 0; i < 10; i++)
 	{
-		for (j = 0; j < 10; j++)
+		_putchar('0');
+
+		for (j = 1; j < 10; j++)
 		{
+			if (j <= 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
+
 			mult = i * j;
+			if (mult < 10)
+				_putchar(' ');
+
 			if (mult < 10)
 				_putchar(mult + '0');
 			else
 				print_multi_digit(mult);
-			if (j < 9)
-			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
-			}
 		}
 		_putchar('\n');
 	}
@@ -39,7 +44,7 @@ void times_table(void)
 void print_multi_digit(int n)
 {
 	int last = n % 10;
-	int first = (n / 10) % 10;
+	int first = (n / 10);
 
 	_putchar(first + '0');
 	_putchar(last + '0');
