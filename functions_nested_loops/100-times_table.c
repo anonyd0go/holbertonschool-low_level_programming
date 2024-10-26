@@ -1,8 +1,8 @@
 #include "main.h"
-void print_multi_digit(int n);
+void prnt_num(int n);
 
 /**
- * times_table - Prints multiplication tables from 0 to 15
+ * print_times_table - Prints multiplication tables from 0 to 15
  * @n: the size of the table
  * Return: Void
  */
@@ -54,7 +54,7 @@ void prnt_num(int n)
 	}
 
 	if (n / 10)
-		prnt_num( n / 10);
+		prnt_num(n / 10);
 
 	_putchar('0' + (n % 10));
 }
