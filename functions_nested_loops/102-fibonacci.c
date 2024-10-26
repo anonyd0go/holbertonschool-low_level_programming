@@ -12,7 +12,7 @@ int main(void)
 	int i;
 	unsigned long int fibo;
 
-	printf("%lu %lu\n", first, second);
+	printf("%lu, %lu, ", first, second);
 	for (i = 0; i < limit; i++)
 	{
 		fibo = first + second;
