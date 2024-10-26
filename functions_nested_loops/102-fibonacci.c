@@ -8,7 +8,7 @@ int main(void)
 {
 	unsigned long int first = 1;
 	unsigned long int second = 2;
-	int limit = 50;
+	int limit = 48;
 	int i;
 	unsigned long int fibo;
 
