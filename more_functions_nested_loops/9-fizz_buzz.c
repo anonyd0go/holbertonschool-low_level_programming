@@ -12,7 +12,7 @@ int main(void)
 
 	for (i = 1; i <= limit; i++)
 	{
-		if ((i % 3 == 0) && (i % 5 ==0))
+		if ((i % 3 == 0) && (i % 5 == 0))
 			printf("FizzBuzz");
 		else if (i % 3 == 0)
 			printf("Fizz");
@@ -21,7 +21,7 @@ int main(void)
 		else
 			printf("%d", i);
 
-		if (i < limit - 1)
+		if (i < limit)
 			printf(" ");
 		else
 			printf("\n");
