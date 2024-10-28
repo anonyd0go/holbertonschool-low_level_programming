@@ -10,3 +10,6 @@ Using variables, creating conditionals, using loops
 
 ## Functions and nested loops
 Define and declare functions, use nested loops, explore variable scope
+
+## More functions and nested loops
+Deeper exploration of nested loops and functions
