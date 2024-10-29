@@ -13,3 +13,7 @@ Define and declare functions, use nested loops, explore variable scope
 
 ## More functions and nested loops
 Deeper exploration of nested loops and functions
+
+## Pointers, arrays, and strings
+Introduction into using pointers and manipulating values based on memory location
+
