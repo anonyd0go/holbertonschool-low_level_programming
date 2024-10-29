@@ -9,6 +9,9 @@ void print_rev(char *s)
 {
 	char *ps = s;
 
+	if (*s == '\0')
+		return;
+
 	while (*ps != '\0')
 	{
 		ps++;
@@ -18,7 +21,4 @@ void print_rev(char *s)
 		ps--;
 		_putchar(*ps);
 	} while (ps > s);
-	
-	if (*ps != '\0')
-		_putchar('\n');
 }
