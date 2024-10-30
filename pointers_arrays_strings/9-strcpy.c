@@ -18,5 +18,7 @@ char *_strcpy(char *dest, char *src)
 		ln++;
 	}
 
+	*(pst + (ln + 1)) = *(cp + (ln + 1));
+
 	return (dest);
 }
