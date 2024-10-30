@@ -18,8 +18,6 @@ void puts_half(char *str)
 	else
 		mid = (ln - 1) / 2;
 
-	_putchar('0' + mid);
-
 	for (vis = str + mid; vis < str + ln; vis++)
 	{
 		_putchar(*vis);
