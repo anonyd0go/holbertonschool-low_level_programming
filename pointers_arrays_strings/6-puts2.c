@@ -15,7 +15,7 @@ void puts2(char *str)
 
 	for (prn = str; prn <= end; prn++)
 	{
-		if (*prn != '\0)
+		if (*prn != '\0')
 			_putchar(*prn);
 		prn++;
 	}
