@@ -16,7 +16,7 @@ void rev_string(char *s)
 
 	sp -= 1;
 
-	for (st = s; st != sp; st++, sp--)
+	for (st = s; st <= sp; st++, sp--)
 	{
 		tmp = *st;
 		*st = *sp;
