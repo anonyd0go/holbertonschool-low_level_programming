@@ -11,14 +11,15 @@ char *_strcpy(char *dest, char *src)
 	char *cp = src;
 	char *pst = dest;
 	int ln = 0;
+	int i;
 
 	while (*(cp + ln) != '\0')
-	{
-		*(pst + ln) = *(cp + ln);
 		ln++;
-	}
 
-	*(pst + (ln + 1)) = *(cp + (ln + 1));
+	for (i = 0; i <= ln; i++)
+	{
+		*(pst + i) = *(cp + i);
+	}
 
 	return (dest);
 }
