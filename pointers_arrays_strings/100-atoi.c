@@ -17,16 +17,11 @@ int _atoi(char *s)
 			neg *= -1;
 	}
 
-	if (*(sp + 1) == '\0' && (*sp >= '0' && *sp <= 9))
-		return (num);
-
 	while (*sp >= '0' && *sp <= '9')
 	{
-		num = num * 10 + (*sp - '0');
+		num = num * 10 + neg * (*sp - '0');
 		sp++;
 	}
-
-	num *= neg;
 
 	return (num);
 }
