@@ -4,6 +4,7 @@
  * _strncat - Concatinates two strings until N chars
  * @dest: Where both strs will be concatinated
  * @src: Str that will be added
+ * @n: Elements to be concatinated from src
  * Return: Pointer to the concatinated str
  */
 char *_strncat(char *dest, char *src, int n)
@@ -15,7 +16,7 @@ char *_strncat(char *dest, char *src, int n)
 	while (dest[d_ln] != '\0')
 		d_ln++;
 
-	while(src[s_ln] != '\0')
+	while (src[s_ln] != '\0')
 		s_ln++;
 
 	if (n > s_ln)
