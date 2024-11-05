@@ -2,8 +2,8 @@
 
 /**
  * _strstr - Locates a substring
- * @haystack - The str to be searched
- * @needle - The str that is being searched for
+ * @haystack: The str to be searched
+ * @needle: The str that is being searched for
  * Return: Pointer to the first occurance of needle
  */
 char *_strstr(char *haystack, char *needle)
@@ -19,6 +19,8 @@ char *_strstr(char *haystack, char *needle)
 
 	if (ln_n > ln_h)
 		return (0);
+	else if (ln_n == 0)
+		return (haystack);
 
 	for (i = 0; i < ln_h; i++)
 	{
