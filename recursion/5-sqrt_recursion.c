@@ -26,7 +26,7 @@ int fnd_rt(int rt, int n)
 	if (rt * rt == n)
 		return (rt);
 	else if (rt * rt < n)
-		return(fnd_rt(rt + 1, n));
+		return (fnd_rt(rt + 1, n));
 	else
 		return (-1);
 }
