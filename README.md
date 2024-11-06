@@ -20,3 +20,5 @@ Introduction into using pointers and manipulating values based on memory locatio
 ## Recursion
 Introduction to recursions
 
+## Argc, argv
+Introduction to using argc and argv as parameters
