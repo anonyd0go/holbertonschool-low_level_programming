@@ -17,3 +17,6 @@ Deeper exploration of nested loops and functions
 ## Pointers, arrays, and strings
 Introduction into using pointers and manipulating values based on memory location
 
+## Recursion
+Introduction to recursions
+
