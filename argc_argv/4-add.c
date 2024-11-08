@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+int check_num_argv(char *num);
 
 /**
  * main - Prints the sum of positive numbers
@@ -21,18 +22,39 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		if (!atoi(argv[i]))
+		if (check_num_argv(argv[i]))
 		{
-			printf("Error\n");
-			exit(1);
+			sum += atoi(argv[i]);
 		}
 		else
 		{
-			sum += atoi(argv[i]);
+			printf("Error\n");
+			return (1);
 		}
 	}
 
 	printf("%d\n", sum);
 	return (0);
 
+}
+
+
+/**
+ * check_num_argv - Checks the numbers given at the cli for correct input
+ * @argv: Number to analyze
+ * Return: 1 if all arguments are positive nums, 0 otherwise
+ */
+int check_num_argv(char *num)
+{
+	int i = 0;
+
+	while (*(num + i) != '\0')
+	{
+		if (*(num + i) < '0' || *(num + i) > '9')
+			return (0);
+
+		i++;
+	}
+
+	return (1);
 }
