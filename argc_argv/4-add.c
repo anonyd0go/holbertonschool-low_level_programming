@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 
 /**
  * check_num_argv - Checks the numbers given at the cli for correct input
- * @argv: Number to analyze
+ * @num: Number to analyze
  * Return: 1 if all arguments are positive nums, 0 otherwise
  */
 int check_num_argv(char *num)
