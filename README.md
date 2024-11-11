@@ -22,3 +22,6 @@ Introduction to recursions
 
 ## Argc, argv
 Introduction to using argc and argv as parameters
+
+## Malloc, free
+Introduction to dynamic memory allocation and memory management
