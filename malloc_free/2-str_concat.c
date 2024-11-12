@@ -13,9 +13,6 @@ char *str_concat(char *s1, char *s2)
 	unsigned int i, len1, len2;
 	char *concat;
 
-	if (s1 == 0 && s2 == 0)
-		return (0);
-
 	if (s1 != NULL)
 		len1 = _strlen(s1);
 	else
@@ -52,13 +49,13 @@ char *str_concat(char *s1, char *s2)
  */
 unsigned int _strlen(char *str)
 {
-	unsigned int len = 0;
+	unsigned int len;
 
 	if (!str)
 		return (0);
 
-	while (*(str + len))
-		len++;
+	for (len = 0; str[len]; len++)
+		;
 
 	return (len);
 }
