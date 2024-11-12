@@ -40,7 +40,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
  */
 unsigned int _strlen(char *str)
 {
-	if (!str || str == NULL)
+	if (!str || str == NULL || *str == '\0')
 		return (0);
 	if (*(str + 1) == '\0')
 		return (1);
