@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 unsigned int _strlen(char *str);
+
 /**
  * _strdup - Copyes a str into allocated memory
  * @str: String to be copied
@@ -15,12 +16,12 @@ char *_strdup(char *str)
 		return (0);
 
 	size = _strlen(str);
-	cp = malloc(size * sizeof(char));
+	cp = malloc((size_t)size * sizeof(char));
 
 	if (cp == NULL)
 		return (0);
 
-	for (i = 0; i <= size; i++)
+	for (i = 0; i < size; i++)
 		*(cp + i) = *(str + i);
 
 	return (cp);
@@ -38,7 +39,7 @@ unsigned int _strlen(char *str)
 
 	if (str)
 	{
-		for (i = 0; str[i]; i++)
+		for (i = 0; str[i] != '\0'; i++)
 			;
 
 		return (i);
