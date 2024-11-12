@@ -25,3 +25,6 @@ Introduction to using argc and argv as parameters
 
 ## Malloc, free
 Introduction to dynamic memory allocation and memory management
+
+## More malloc, free
+Deeper exploration into dynamic memory allocation
