@@ -28,3 +28,6 @@ Introduction to dynamic memory allocation and memory management
 
 ## More malloc, free
 Deeper exploration into dynamic memory allocation
+
+## Structures, typedef
+Introduction to creating and using structures in C
