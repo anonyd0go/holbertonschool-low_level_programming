@@ -18,7 +18,7 @@ char *argstostr(int ac, char **av)
 
 	total_len = len_of_args(av, ac);
 
-	concat = malloc((total_len + ac + 1) * sizeof(char));
+	concat = malloc((total_len + 1) * sizeof(char));
 	if (concat == NULL)
 		return (0);
 
