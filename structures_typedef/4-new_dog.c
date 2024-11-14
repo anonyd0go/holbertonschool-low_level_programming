@@ -1,7 +1,7 @@
 #include "dog.h"
 #include <stdlib.h>
 unsigned int _strlen(char *str);
-char *_strcpy(char *str, unsigned int ln);
+char *_strcpy(char *cp, char *str, unsigned int ln);
 
 /**
  * new_dog - Creates a dog struct in memory
@@ -18,22 +18,32 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (ptr == NULL)
 		return (0);
 
-	ptr->name = _strcpy(name, _strlen(name));
-	if (ptr->name == NULL)
+	if (name == NULL)
+		ptr->name = NULL;
+	else
 	{
-		free(ptr);
-		return (0);
+		ptr->name = _strcpy(ptr->name, name, _strlen(name));
+		if (ptr->name == NULL)
+		{
+			free(ptr);
+			return (0);
+		}
 	}
 
 	ptr->age = age;
 
-	ptr->owner = _strcpy(owner, _strlen(owner));
-	if (ptr->owner == NULL)
+	if (owner == NULL)
+		ptr->owner = NULL;
+	else
 	{
-		free(ptr->name);
-		return (0);
+		ptr->owner = _strcpy(ptr->owner, owner, _strlen(owner));
+		if (ptr->owner == NULL)
+		{
+			free(ptr->name);
+			free(ptr);
+			return (0);
+		}
 	}
-
 	return (ptr);
 }
 
@@ -57,14 +67,14 @@ unsigned int _strlen(char *str)
 
 /**
  * _strcpy - Copies a str to a new destination
+ * @cp: location where the str will be copied
  * @str: String to copy
  * @ln: Length of the string
  * Return: pointer to the copy of the str, NULL otherwise
  */
-char *_strcpy(char *str, unsigned int ln)
+char *_strcpy(char *cp, char *str, unsigned int ln)
 {
 	unsigned int i;
-	char *cp;
 
 	cp = malloc((ln + 1) * sizeof(char));
 	if (cp == NULL)
