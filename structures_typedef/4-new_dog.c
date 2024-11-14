@@ -20,13 +20,19 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	ptr->name = _strcpy(name, _strlen(name));
 	if (ptr->name == NULL)
+	{
+		free(ptr);
 		return (0);
+	}
 
 	ptr->age = age;
 
 	ptr->owner = _strcpy(owner, _strlen(owner));
 	if (ptr->owner == NULL)
+	{
+		free(ptr->name);
 		return (0);
+	}
 
 	return (ptr);
 }
