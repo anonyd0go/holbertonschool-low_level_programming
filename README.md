@@ -34,3 +34,6 @@ Introduction to creating and using structures in C
 
 ## Function pointers
 Introduction to function pointers
+
+## Variadic functions
+Introduction to cariadic function and stdarg.h
