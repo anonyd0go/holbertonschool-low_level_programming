@@ -31,3 +31,6 @@ Deeper exploration into dynamic memory allocation
 
 ## Structures, typedef
 Introduction to creating and using structures in C
+
+## Function pointers
+Introduction to function pointers
