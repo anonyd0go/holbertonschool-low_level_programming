@@ -7,7 +7,7 @@
  * @argv: Arg vector
  * Return: 0 if succesfull, 1 or 2 otherwise
  */
-int main(int argc, char * argv[])
+int main(int argc, char *argv[])
 {
 	int i, bytes;
 	unsigned char *ln;
@@ -28,9 +28,9 @@ int main(int argc, char * argv[])
 	ln = (unsigned char *)main;
 	if (bytes > 0)
 	{
-		for (i = 0; i < bytes - 1; i++)
+		for (i = 0;i < bytes - 1; i++)
 			printf("%02hhx ", ln[i]);
 	}
-	printf("\n");
+	printf("%hhx\n", ln[i]);
 	return (0);
 }
