@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 	ln = (unsigned char *)main;
 	if (bytes > 0)
 	{
-		for (i = 0;i < bytes - 1; i++)
+		for (i = 0; i < bytes - 1; i++)
 			printf("%02hhx ", ln[i]);
 	}
 	printf("%hhx\n", ln[i]);
