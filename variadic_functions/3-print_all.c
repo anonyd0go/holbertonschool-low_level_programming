@@ -24,7 +24,7 @@ void print_all(const char * const format, ...)
 	va_list lst;
 
 	va_start(lst, format);
-	while(format[i])
+	while (format[i])
 	{
 		j = 0;
 		while (type[j].format != NULL)
@@ -77,7 +77,7 @@ void print_fl(va_list l)
 
 /**
  * print_s - prints a str
- * @s: Str to print
+ * @l: Arg list
  * Return: Void
  */
 void print_s(va_list l)
