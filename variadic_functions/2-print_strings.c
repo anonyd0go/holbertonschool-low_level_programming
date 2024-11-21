@@ -23,26 +23,17 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	}
 
 	va_start(lst, n);
-	for (i = 0; i < n - 1; i++)
+	for (i = 0; i < n; i++)
 	{
-		stp = strdup(va_arg(lst, char *));
+		stp = va_arg(lst, char *);
 		if (stp)
 			printf("%s", stp);
 		else
 			printf("(nil)");
 
-		if (separator)
+		if (i < n - 1 && separator)
 			printf("%s", separator);
-		free(stp);
 	}
 
-	stp = strdup(va_arg(lst, char *));
-	if (stp)
-		printf("%s", stp);
-	else
-		printf("(nil)");
 	printf("\n");
-	free(stp);
 }
-
-
