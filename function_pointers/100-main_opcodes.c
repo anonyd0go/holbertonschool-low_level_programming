@@ -29,7 +29,7 @@ int main(int argc, char * argv[])
 	if (bytes > 0)
 	{
 		for (i = 0; i < bytes - 1; i++)
-			printf("%002hhx ", ln[i]);
+			printf("%02hhx ", ln[i]);
 	}
 	printf("\n");
 	return (0);
