@@ -22,6 +22,7 @@ void print_all(const char * const format, ...)
 		{NULL, NULL}
 	};
 	va_list lst;
+	char *div = "";
 
 	va_start(lst, format);
 	while (format[i])
@@ -31,9 +32,9 @@ void print_all(const char * const format, ...)
 		{
 			if (*(type[j].format) == format[i])
 			{
+				printf("%s", div);
 				type[j].func(lst);
-				if (format[i + 1] != '\0')
-					printf(", ");
+				div = ", ";
 				break;
 			}
 			j++;
