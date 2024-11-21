@@ -25,7 +25,7 @@ void print_all(const char * const format, ...)
 	char *div = "";
 
 	va_start(lst, format);
-	while (format[i])
+	while (format && format[i])
 	{
 		j = 0;
 		while (type[j].format != NULL)
