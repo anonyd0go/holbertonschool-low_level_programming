@@ -26,12 +26,11 @@ int main(int argc, char *argv[])
 	}
 
 	ln = (unsigned char *)main;
-	i = 0;
 	if (bytes > 0)
 	{
-		while (i < bytes - 1)
-			printf("%02hhx ", ln[i++]);
-		printf("%hhx\n", ln[i]);
+		for (i = 0; i < bytes - 1; i++)
+			printf("%02hhx ", ln[i]);
 	}
+	printf("%hhx\n", ln[i]);
 	return (0);
 }
