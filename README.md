@@ -40,3 +40,6 @@ Introduction to cariadic function and stdarg.h
 
 ## Singly linked lists
 Introduction to created data structures and singly linked lists
+
+## Doubly linked lists
+Introduction to doubly linked lists
