@@ -6,7 +6,7 @@
  * add_node_end - adds a node to the end of the list
  * @head: beggining og the sll
  * @str: Content of the node
- * Return: Head of the sll
+ * Return: Address of the new node
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
@@ -35,5 +35,5 @@ list_t *add_node_end(list_t **head, const char *str)
 	else
 		*head = new;
 
-	return (*head);
+	return (new);
 }
