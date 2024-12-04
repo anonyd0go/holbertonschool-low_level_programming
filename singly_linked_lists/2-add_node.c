@@ -8,7 +8,7 @@ unsigned int _strlen(char *str);
  * add_node - Adds a new node to the beggining of a sll
  * @head: pointer to the pointer that is the head of the sll
  * @str: The string that will go in the sll
- * Return: a pointer to the head of the sll
+ * Return: Address of the new node
  */
 list_t *add_node(list_t **head, const char *str)
 {
@@ -27,7 +27,7 @@ list_t *add_node(list_t **head, const char *str)
 
 	*head = new;
 
-	return (*head);
+	return (new);
 }
 
 /**
