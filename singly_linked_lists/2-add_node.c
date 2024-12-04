@@ -1,6 +1,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include "lists.h"
+unsigned int _strlen(char *str);
+
 
 /**
  * add_node - Adds a new node to the beggining of a sll
@@ -21,11 +23,28 @@ list_t *add_node(list_t **head, const char *str)
 		free(new);
 		return (0);
 	}
-	new->len = 0;
-	while (new->str[new->len])
-		new->len++;
+	new->len = _strlen(new->str);
 
 	*head = new;
 
 	return(*head);
 }
+
+/**
+ * _strlen - Gets the length of a str
+ * @str: String to analyze
+ * Return:length of the str
+ */
+unsigned int _strlen(char *str)
+{
+	unsigned int len;
+
+	if (!str)
+		return (0);
+
+	for (len = 0; str[len]; len++)
+		continue;
+
+	return (len);
+}
+
