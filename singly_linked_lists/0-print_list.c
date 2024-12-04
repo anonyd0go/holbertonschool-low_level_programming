@@ -2,14 +2,16 @@
 #include "lists.h"
 #include <stdio.h>
 
-/** print_list - prints all the elements of a list
+
+/**
+ * print_list - prints all the elements of a list
  * @h: head of the linked list
  * Return: Number of elements in the linked list
  */
 size_t print_list(const list_t *h)
 {
-	const list_t *p = h;
 	size_t i = 0;
+	const list_t *p = h;
 
 	while (p)
 	{
@@ -19,7 +21,7 @@ size_t print_list(const list_t *h)
 			printf("[%u] %s\n", p->len, p->str);
 
 		p = p->next;
-		++i;
+		i++;
 	}
 
 	return (i);
