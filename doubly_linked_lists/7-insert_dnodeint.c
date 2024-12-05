@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include "lists.h"
+unsigned int dll_len(dlistint_t **head);
 
 /**
  * insert_dnodeint_at_index - insets a node at a specific index
@@ -10,17 +11,18 @@
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	unsigned int i;
+	unsigned int i, len = dll_len(h);
 	dlistint_t *p = *h;
 	dlistint_t *new;
 
+	if (len < idx)
+		return (NULL);
 	if (idx == 0)
 		return (add_dnodeint(h, n));
-	for (i = 0; i < idx; i++)
+	for (i = 0; i < idx - 1; i++, p = p->next)
 	{
 		if (p == NULL)
 			return (NULL);
-		p = p->next;
 	}
 	if (p->next == NULL)
 		return (add_dnodeint_end(h, n));
@@ -28,10 +30,29 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	if (new == NULL)
 		return (NULL);
 
-	new->next = p;
-	new->prev = p->prev;
-	p->prev->next = new;
-	p->prev = new;
+	new->next = p->next;
+	new->prev = p;
+	p->next->prev = new;
+	p->next = new;
 	new->n = n;
 	return (new);
+}
+
+/**
+ * dll_len - gets the length of a dll
+ * @head: beggining of the dll
+ * Return: length of the dll
+ */
+unsigned int dll_len(dlistint_t **head)
+{
+	unsigned int i = 0;
+	dlistint_t *p = *head;
+
+	while (p != NULL)
+	{
+		i++;
+		p = p->next;
+	}
+
+	return (i);
 }
