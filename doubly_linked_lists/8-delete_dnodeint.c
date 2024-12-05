@@ -11,10 +11,10 @@ unsigned int dll_len(dlistint_t *head);
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	unsigned int i = 0;
+	unsigned int i = 0, len = dll_len(*head);
 	dlistint_t *p = *head;
 
-	if (p == NULL)
+	if (p == NULL || len < index)
 		return (-1);
 	if (index == 0)
 	{
@@ -31,6 +31,12 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		if (!p)
 			return (-1);
 		i++;
+	}
+	if (index == len - 1)
+	{
+		p->prev->next = NULL;
+		free(p);
+		return(1);
 	}
 
 	p->prev->next = p->next;
