@@ -43,3 +43,6 @@ Introduction to created data structures and singly linked lists
 
 ## Doubly linked lists
 Introduction to doubly linked lists
+
+## Bit manipulation
+Introduction to bit manipulation
