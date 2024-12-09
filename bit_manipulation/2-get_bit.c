@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * get_but - gets the value of an bit in a given index
+ * get_bit - gets the value of an bit in a given index
  * @n: Unsigned int
  * @index: index to find the bit
  * Return: bit at the desired index, -1 if error
